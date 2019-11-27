@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
 
     [SerializeField]
-    private float _speed;
+    private float _speed;//Define a velocidade do jogador
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movimento do jogador pelas setas do teclado ou pelas teclas WASD
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * _speed, Input.GetAxis("Vertical") * _speed);
     }
 }
